@@ -2,7 +2,7 @@
 
 #include <Wire.h>
 
-#define SENS_CNT      3
+#define SENS_CNT      5
 #define TIMER_SAMPLE  TIM16
 
 
@@ -117,12 +117,12 @@ void init_sensors(void)
     delay(10);
     tcaselect(4);
     sens2.init();
-//    delay(10);
-//    tcaselect(5);
-//    sens3.init();
-//    delay(10);
-//    tcaselect(6);
-//    sens4.init();
+    delay(10);
+    tcaselect(5);
+    sens3.init();
+    delay(10);
+    tcaselect(6);
+    sens4.init();
     
     delay(200);
 }

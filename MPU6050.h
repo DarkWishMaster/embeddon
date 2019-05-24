@@ -35,11 +35,11 @@ public:
 
   bool init()
   {
-    byte whoami = this->readReg(MPU6050_WHO_AM_I);
-    if (whoami != MPU6050_ADDR)
-    {
-      return false;
-    }
+//    byte whoami = this->readReg(MPU6050_WHO_AM_I);
+//    if (whoami != MPU6050_ADDR)
+//    {
+//      return false;
+//    }
     this->writeReg(MPU6050_PWR_MGMT_1, 0);  // wake up from sleep
     this->writeReg(MPU6050_SMPRT_DIV,  0);  // no sampling rate divider ( => 1 kHZ sampling for accelerometer)
     this->writeReg(MPU6050_CONFIG,     0);  // no ext sync, and weakest LPF filter (260 Hz)
